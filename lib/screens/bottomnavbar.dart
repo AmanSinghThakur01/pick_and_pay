@@ -11,39 +11,39 @@ class Bottomnavbar extends StatefulWidget {
 }
 
 class _BottomnavbarState extends State<Bottomnavbar> {
- int selectedindex = 0;
+ int selectedindex = 1;
 List screenlist = [
   Homepage(),
-  Productgrid(),
+  ProductGrid(),
   Cart(),
 ];
 
   @override
   Widget build(BuildContext context) {
         return Scaffold(
-        appBar: AppBar(
-          backgroundColor: const Color.fromARGB(255, 127, 248, 248),
-          title: Text(
-            "Pick & Pay",
-            style: TextStyle(
-              fontSize: 25,
-            ),
-          ),
-          actions: [
-            IconButton(
-              onPressed: () {
-                Text("search icons pressed");
-              },
-              icon: Icon(Icons.search),
-            ),
-            IconButton(
-              onPressed: () {
-                Text("alert icons pressed");
-              },
-              icon: Icon(Icons.notifications_none),
-            )
-          ],
-        ),
+         appBar: AppBar(
+           backgroundColor: const Color.fromARGB(255, 244, 211, 161),
+           title: Text(
+             "Pick & Pay",
+             style: TextStyle(
+               fontSize: 25,
+             ),
+         ),
+           actions: [
+             IconButton(
+               onPressed: () {
+                 Text("search icons pressed");
+               },
+               icon: Icon(Icons.search),
+             ),
+           IconButton(
+             onPressed: () {
+                 Text("alert icons pressed");
+               },
+               icon: Icon(Icons.notifications_none),
+             )
+           ],
+         ),
         body: screenlist[selectedindex],
        bottomNavigationBar:BottomNavigationBar(items: [
         BottomNavigationBarItem(icon: Icon(Icons.home),label: "home"),
